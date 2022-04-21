@@ -14,18 +14,16 @@ knitr::opts_chunk$set(echo = FALSE)
 
 # Reproducible Pitch Presentation
 
-Author: Omer Shechter
+Author: Aisha
 
-Date: 2 December 2018
+Date: 21 April 2022
 
-# 2017 Car crash data in Allegheny County
+## 2017 Car crash data in Allegheny County {.smaller}
 
-transition: rotate
-
-<font size = "5">This Application uses data about car's accidents in
-Allegheny County in the US, To demonstrate various capabilities from the
-Developing Data Products Course. The Application provides visualization
-about car accidents in Allegheny County in 2017.
+This Application uses data about car's accidents in Allegheny County in
+the US, To demonstrate various capabilities from the Developing Data
+Products Course. The Application provides visualization about car
+accidents in Allegheny County in 2017.
 
 -   Using Shiny UI Server Application.
 -   Using Leaflet interactive MAP application.
@@ -33,39 +31,46 @@ about car accidents in Allegheny County in 2017.
 -   Two Input Widget (Drop down list and Slide Bar).
 -   Using Reactive function.
 -   Server Business logic (Subsetting data frame based on input).
--   Full help page (Documentation)</font>.
+-   Full help page (Documentation).
+-   Shiny Applicatio Link :
+    <https://aishaalnaqbi.shinyapps.io/ShinyAssignment/>
+-   Github Repository Link :
+    <https://github.com/AishaAlnaqbi9/ShinyCourseProject>
 
-<font size = "6">Shiny Applicatio Link :
-<https://omersect.shinyapps.io/project/> </font> <font size = "6">Github
-Repository Link :
-<https://github.com/omershect/Course-Project-Shiny-Application-and-Reproducible-Pitch>
-</font>
+## The Data {.smaller}
 
-# The Data
+Data link:
+<https://data.wprdc.org/datastore/dump/bf8b3c7e-8d60-40df-9134-21606a451c1a>
 
-transition: rotate <font size = "5"> - Data link:
-<https://data.wprdc.org/datastore/dump/bf8b3c7e-8d60-40df-9134-21606a451c1a> -
-Data contains information on all accidents in Allegheny County in
-2017. - Data used: </font> <font size = "4"> - Geo Location data. -
-Months of the Accident. - AUTOMOBILE_COUNT - the number of cars
-involved. - FATAL_COUNT - Total number of death. -
-ILLEGAL_DRUG_RELATED - Ilegal drug involvement. - DRINKING_DRIVER Number
-of Drunk People involved in the car accident. - INJURY_COUNT - Number of
-injuries. - Fatal And INJURY - Will be used to classifying the type of
-the accident And create different Icons.
+-Data contains information on all accidents in Allegheny County in 2017.
 
-</font> Data and Server calculations
-======================================================== The following
-calculations are done in the server : - Load data. - Subset data -
-remove the accidents with zero cars involved. - Remove NA items. -
-Create new columns which classify the accident (Death/Injury/None). -
-Check the Min and Max cars number involved and pass it to the slider
-input. - Slice the dataset dynamically based on Month selection and the
-number of cars selection.
+Data used:
 
-# Data and Server calculation (Cont.)
+-   Geo Location data.
+-   Months of the Accident.
+-   AUTOMOBILE_COUNT - the number of cars involved.
+-   FATAL_COUNT - Total number of death.
+-   ILLEGAL_DRUG_RELATED - Ilegal drug involvement.
+-   DRINKING_DRIVER Number of Drunk People involved in the car accident.
+-   INJURY_COUNT - Number of injuries.
+-   Fatal And INJURY - Will be used to classifying the type of the
+    accident And create different Icons.
 
-<font size = "7"> Data str </font> <font size = "5">
+## Data and Server calculations {.smaller}
+
+The following calculations are done in the server :
+
+-   Load data.
+-   Subset data
+-   remove the accidents with zero cars involved.
+-   Remove NA items.
+-   Create new columns which classify the accident (Death/Injury/None).
+-   Check the Min and Max cars number involved and pass it to the slider
+    input.
+-   Slice the dataset dynamically based on Month selection and the
+    number of cars selection.
+
+## Data and Server calculation (Cont.) {.smaller}
 
 ```{r, echo=FALSE}
 library(tidyr)
@@ -131,6 +136,6 @@ table(dfCrash$Death_Injuries)
 
 </font>
 
-# Shiny App
+## Shiny App
 
 ![](ShinyApp.png)
